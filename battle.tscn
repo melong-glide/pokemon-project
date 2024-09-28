@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddaraqceasp2j"]
+
+[ext_resource type="PackedScene" uid="uid://bljvvnic2wo5d" path="res://pokemon.tscn" id="1_isr7q"]
+
+[node name="Battle" type="Node2D"]
+
+[node name="Tamed_pokemon" parent="." instance=ExtResource("1_isr7q")]
+
+[node name="Enemy_pokemon" parent="." instance=ExtResource("1_isr7q")]
