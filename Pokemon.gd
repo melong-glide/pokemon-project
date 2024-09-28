@@ -17,6 +17,18 @@ var stats = {
 	"acc": 90,
 	"type": "normal",
 }
+var types = ["fire", "water", "ice", "lava", "air", "ground", "poison", "fairy"]
+var skill_set = [
+	{
+		"name": "fireball",
+		"type": "fire",
+		"effect": null,
+		"scale_stat": "attack",
+		"scale_ratio": 0.5,
+		"base_acc": 0,
+		"stamina_cost": 5,
+	}
+]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
