@@ -15,13 +15,13 @@ var stats = {
 	"max_stamina": 100,
 	"current_stamina": 100,
 	"acc": 90,
-	"type": "normal",
+	"type": Battle.Pokemon_Type.FIRE
 }
-var types = ["fire", "water", "ice", "lava", "air", "ground", "poison", "fairy"]
+
 var skill_set = [
 	{
 		"name": "fireball",
-		"type": "fire",
+		"type": Battle.Pokemon_Type.FIRE,
 		"effect": null,
 		"scale_stat": "attack",
 		"scale_ratio": 0.5,

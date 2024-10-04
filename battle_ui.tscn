@@ -1,0 +1,230 @@
+[gd_scene load_steps=3 format=3 uid="uid://43c6uci17ola"]
+
+[ext_resource type="Texture2D" uid="uid://clb5vv87b7fky" path="res://download__4_-removebg-preview.png" id="1_t4t01"]
+[ext_resource type="Texture2D" uid="uid://c43p4ogsdag2i" path="res://assests/lightning-pixel-art-vector-43632837-removebg-preview (1).png" id="2_jv4xs"]
+
+[node name="Battle UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_right = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player info" type="ColorRect" parent="."]
+z_index = -5
+layout_mode = 0
+offset_left = 230.0
+offset_top = 473.0
+offset_right = 562.0
+offset_bottom = 614.0
+
+[node name="Player health" type="ColorRect" parent="Player info"]
+z_index = 1
+layout_mode = 0
+offset_left = 36.0
+offset_top = 9.0
+offset_right = 254.0
+offset_bottom = 40.0
+color = Color(1, 0.77407, 0.989877, 1)
+
+[node name="Health icon" type="TextureRect" parent="Player info/Player health"]
+layout_mode = 0
+offset_left = -45.0
+offset_top = -12.0
+offset_right = 10.0
+offset_bottom = 43.0
+texture = ExtResource("1_t4t01")
+expand_mode = 1
+
+[node name="Health amount" type="Label" parent="Player info/Player health"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 3.0
+offset_right = 287.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100/100"
+
+[node name="Player non-health" type="ColorRect" parent="Player info/Player health"]
+z_index = -1
+offset_right = 218.0
+offset_bottom = 31.0
+color = Color(1, 0.676881, 0.670371, 1)
+
+[node name="Player stamina" type="ColorRect" parent="Player info"]
+z_index = 1
+offset_left = 36.0
+offset_top = 55.0
+offset_right = 254.0
+offset_bottom = 86.0
+color = Color(0.900149, 0.925861, 0.398877, 1)
+
+[node name="Stamina icon" type="TextureRect" parent="Player info/Player stamina"]
+layout_mode = 0
+offset_left = -41.0
+offset_top = -9.0
+offset_right = 6.0
+offset_bottom = 42.0
+texture = ExtResource("2_jv4xs")
+expand_mode = 1
+
+[node name="Stamina amount" type="Label" parent="Player info/Player stamina"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 4.0
+offset_right = 286.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100/100"
+
+[node name="Player non-stamina" type="ColorRect" parent="Player info/Player stamina"]
+z_index = -1
+offset_right = 218.0
+offset_bottom = 31.0
+color = Color(0.678431, 0.666667, 0.631373, 1)
+
+[node name="Accuracy" type="ColorRect" parent="Player info"]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -75.0
+offset_right = 368.0
+offset_bottom = -35.0
+color = Color(2.79158e-06, 0.991967, 0.566052, 1)
+
+[node name="Perfect" type="ColorRect" parent="Player info/Accuracy"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = -14.0
+offset_right = 206.0
+offset_bottom = 57.0
+color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+
+[node name="Enemy" type="ColorRect" parent="Player info"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = -428.0
+offset_right = 502.0
+offset_bottom = -341.0
+
+[node name="Player label" type="Label" parent="Player info"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 99.0
+offset_right = 214.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Charzard"
+
+[node name="Enemy label" type="Label" parent="Player info"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = -384.0
+offset_right = 465.0
+offset_bottom = -342.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Whoever this guy is"
+
+[node name="Skills" type="Button" parent="Player info"]
+layout_mode = 0
+offset_left = 397.0
+offset_top = -14.0
+offset_right = 549.0
+offset_bottom = 69.0
+text = "Skills"
+
+[node name="Inventory" type="Button" parent="Player info"]
+offset_left = 562.0
+offset_top = -14.0
+offset_right = 714.0
+offset_bottom = 69.0
+text = "Inventory"
+
+[node name="Pokemon" type="Button" parent="Player info"]
+offset_left = 397.0
+offset_top = 75.0
+offset_right = 549.0
+offset_bottom = 158.0
+text = "Pokemon"
+
+[node name="Run" type="Button" parent="Player info"]
+offset_left = 562.0
+offset_top = 73.0
+offset_right = 714.0
+offset_bottom = 156.0
+text = "Run"
+
+[node name="Skill_Buttons" type="Control" parent="Player info"]
+anchors_preset = 0
+offset_left = 562.0
+offset_top = 73.0
+offset_right = 602.0
+offset_bottom = 113.0
+
+[node name="Skill 1" type="Button" parent="Player info/Skill_Buttons"]
+layout_mode = 0
+offset_left = -167.0
+offset_top = -87.0
+offset_right = -12.0
+offset_bottom = -6.0
+text = "Skill 1"
+
+[node name="Skill 2" type="Button" parent="Player info/Skill_Buttons"]
+offset_left = -1.0
+offset_top = -87.0
+offset_right = 154.0
+offset_bottom = -6.0
+text = "Skill 1"
+
+[node name="Enemy health" type="ColorRect" parent="Player info"]
+z_index = 1
+offset_left = 197.275
+offset_top = -415.562
+offset_right = 415.275
+offset_bottom = -384.562
+color = Color(1, 0.77407, 0.989877, 1)
+
+[node name="Health icon" type="TextureRect" parent="Player info/Enemy health"]
+layout_mode = 0
+offset_left = -45.0
+offset_top = -12.0
+offset_right = 10.0
+offset_bottom = 43.0
+texture = ExtResource("1_t4t01")
+expand_mode = 1
+
+[node name="Health amount" type="Label" parent="Player info/Enemy health"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 3.0
+offset_right = 287.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100/100"
+
+[node name="Player non-health" type="ColorRect" parent="Player info/Enemy health"]
+z_index = -1
+offset_right = 218.0
+offset_bottom = 31.0
+color = Color(1, 0.676881, 0.670371, 1)
+
+[node name="Text box" type="ColorRect" parent="Player info"]
+layout_mode = 0
+offset_left = -74.0
+offset_top = -133.0
+offset_right = 386.0
+offset_bottom = -11.0
+
+[node name="Label" type="Label" parent="Player info/Text box"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 253.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Charzard did 100 damage"
